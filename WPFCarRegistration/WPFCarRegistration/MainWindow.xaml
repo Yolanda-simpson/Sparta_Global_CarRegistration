@@ -6,7 +6,37 @@
         xmlns:local="clr-namespace:WPFCarRegistration"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin="0,0,-18.4,-20">
+
+        <Label x:Name="username" Content="Full Name" HorizontalAlignment="Left" Height="34" Margin="44,18,0,0" VerticalAlignment="Top" Width="102" FontSize="16"/>
+        <Label x:Name="Password" Content="Address" HorizontalAlignment="Left" Height="32" Margin="33,66,0,0" VerticalAlignment="Top" Width="113" FontSize="16"/>
+        <TextBox x:Name="usernme" HorizontalAlignment="Left" Height="34" Margin="211,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="327" />
+        <PasswordBox x:Name="Password1" HorizontalAlignment="Left" Height="27" Margin="211,71,0,0" VerticalAlignment="Top" Width="327"/>
+        <Label Content="Date you woud like to hire car" HorizontalAlignment="Left" Height="35" Margin="10,110,0,0" VerticalAlignment="Top" Width="201" FontSize="16"/>
+        <Label Content="Gender" HorizontalAlignment="Left" Height="38" Margin="10,184,0,0" VerticalAlignment="Top" Width="118" FontSize="16"/>
+        <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Height="34" Margin="216,111,0,0" VerticalAlignment="Top" Width="327"/>
+        <Label Content="Phone number" HorizontalAlignment="Left" Height="35" Margin="44,248,0,0" VerticalAlignment="Top" Width="102" FontSize="16"/>
+        <Button x:Name="RegBtn" Content="Register" HorizontalAlignment="Left" Height="46" Margin="471,356,0,0" VerticalAlignment="Top" Width="102" FontSize="16" Click="RegBtn_Click"/>
+        <ComboBox SelectedIndex="1" x:Name="combo1" HorizontalAlignment="Left" Height="26" Margin="211,196,0,0" VerticalAlignment="Top" Width="327">
+            <ComboBoxItem Content="Male"/>
+            <ComboBoxItem Content="Female"/>
+        </ComboBox>
+        <TextBox x:Name="numbertxt" HorizontalAlignment="Left" Height="35" Margin="211,256,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="327"/>
+        <Button x:Name="vpBtn" Content="View Profle" HorizontalAlignment="Left" Height="43" Margin="630,363,0,0" VerticalAlignment="Top" Width="119" FontSize="16" Click="VpBtn_Click"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Height="3" Margin="656,66,0,0" VerticalAlignment="Top" Width="0"/>
+        <CheckBox x:Name="comedybtn" Content="Comedy" HorizontalAlignment="Left" Height="26" Margin="667,58,0,0" VerticalAlignment="Top" Width="119" FontSize="16" Checked="Comedybtn_Checked"/>
+        <CheckBox x:Name="fictionbtn" Content="fiction" HorizontalAlignment="Left" Height="35" Margin="667,110,0,0" VerticalAlignment="Top" Width="119" FontSize="16" Checked="Fictionbtn_Checked"/>
+        <CheckBox x:Name="adventurebtn" Content="Aventure" HorizontalAlignment="Left" Height="41" Margin="667,165,0,0" VerticalAlignment="Top" Width="103" FontSize="16" Checked="Adventurebtn_Checked"/>
+        <Image HorizontalAlignment="Left" Height="111" Margin="146,332,0,-23" VerticalAlignment="Top" Width="115">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
+        <RadioButton x:Name="lowage" Content="0-6" HorizontalAlignment="Left" Height="29" Margin="669,248,0,0" VerticalAlignment="Top" Width="111" FontSize="16" Checked="Lowage_Checked"/>
+        <RadioButton x:Name="midage" Content="7-12" HorizontalAlignment="Left" Height="29" Margin="667,282,0,0" VerticalAlignment="Top" Width="119" FontSize="16" Checked="Midage_Checked"/>
+        <RadioButton x:Name="highage" Content="13-18" HorizontalAlignment="Left" Height="29" Margin="669,316,0,0" VerticalAlignment="Top" Width="101" FontSize="16" Checked="Highage_Checked"/>
+        <Button x:Name="selectimg" Content="Select Image" HorizontalAlignment="Left" Height="44" Margin="44,334,0,0" VerticalAlignment="Top" Width="120" FontSize="16" Click="Selectimg_Click"/>
+        <Image x:Name="imagebox" HorizontalAlignment="Left" Height="96" Margin="223,332,0,-8" VerticalAlignment="Top" Width="164"/>
+
     </Grid>
 </Window>
