@@ -46,24 +46,24 @@ namespace WPFCarRegistration
             kc.Name = usernme.Text;
             kc.Address = addrtxt.Text;
             kc.hireDate = DateTime.Now.Year - datepicker.SelectedDate.Value.Year;
-            MessageBox.Show(datepicker.SelectedDate.Value.Year.ToString());
+            
             kc.Gender = combo1.Text;
-            MessageBox.Show(combo1.Text);
+           
             kc.PicturePath = imagebox.Source.ToString();
-            MessageBox.Show(imagebox.Source.ToString());
+            
             kc.PhoneNumber = numbertxt.Text;
             if (smallbtn.IsChecked == true)
             {
-                kc.carType[0] = "Small car";
+                kc.CarType[0] = "Small car";
             }
             if (mediumbtn.IsChecked == true)
             {
-                kc.carType[1] = "meduim car";
+                kc.CarType[1] = "meduim car";
 
             }
             if (largebtn.IsChecked == true)
             {
-                kc.carType[2] = "large car";
+                kc.CarType[2] = "large car";
 
             }
             if (onewk.IsChecked == true)
@@ -78,8 +78,50 @@ namespace WPFCarRegistration
             {
                 kc.Duration = "13-18";
             }
+            if (usernme.Text.Trim() == "")
+            {
+                string myStringVariable1 = string.Empty;
+                MessageBox.Show("Please enter something in the textbox");
+                return;
+            }
             kc.saveData();
+            MessageBox.Show("thank you for submitting your request, we will be in touch shortly");
+        }
+
+        private void Usernme_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void smallbtn_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void mediumbtn_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void largebtn_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void onewk_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void twowks_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void onemonth_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
-    }
 }
+
