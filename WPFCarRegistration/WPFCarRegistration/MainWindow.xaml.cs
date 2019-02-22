@@ -41,6 +41,42 @@ namespace WPFCarRegistration
             }
         }
 
+        public void validateBoxes()
+        {
+            if (usernme.Text == "")
+            {
+
+                MessageBox.Show("Please enter something in the name field ");
+                return;
+            }
+            if (addrtxt.Text == "")
+            {
+
+                MessageBox.Show("Please enter something in the Address  field ");
+                return;
+            }
+            if (addrtxt.Text == "")
+            {
+
+                MessageBox.Show("Please enter something in the name field ");
+                return;
+            }
+            if (combo1.Text == "--Choose--")
+            {
+
+                MessageBox.Show("Select gender");
+            }
+            if (numbertxt.Text == "")
+            {
+
+                MessageBox.Show("Please enter something in the name field ");
+                return;
+            }
+
+
+
+        }
+
         private void RegBtn_Click(object sender, RoutedEventArgs e)
         {
             kc.Name = usernme.Text;
@@ -78,12 +114,7 @@ namespace WPFCarRegistration
             {
                 kc.Duration = "13-18";
             }
-            if (usernme.Text.Trim() == "")
-            {
-                string myStringVariable1 = string.Empty;
-                MessageBox.Show("Please enter something in the textbox");
-                return;
-            }
+            validateBoxes();
             kc.saveData();
             MessageBox.Show("thank you for submitting your request, we will be in touch shortly");
         }
